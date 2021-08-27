@@ -68,8 +68,6 @@ export default function Login() {
         credentials: "same-origin"
       });
 
-      console.log(response);
-
       if (response.statusText !== "OK") {
         throw response.statusText;
       } else {
@@ -79,6 +77,7 @@ export default function Login() {
       }
     } catch (error) {
       console.error(`Login failed with the error: ${error}`);
+
       return error;
     }
   };
